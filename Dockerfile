@@ -1,5 +1,6 @@
 FROM python:3.8-slim-buster
-
+flask --debug run --host=0.0.0.0 --port=8080
+RUN pip install --upgrade flask
 RUN apt update && apt upgrade -y
 RUN apt install git -y
 COPY requirements.txt /requirements.txt
